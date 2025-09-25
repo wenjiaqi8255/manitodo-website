@@ -1,525 +1,434 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>使用条款 - 未来日记</title>
-    <meta name="description" content="未来日记的使用条款，规定用户使用应用的权利和义务">
-    <link rel="stylesheet" href="styles.css">
+    <title>Terms of Use - Manitodo</title>
     <style>
-        .terms-container {
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             max-width: 800px;
             margin: 0 auto;
-            padding: var(--spacing-large) 0;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
         }
-
-        .terms-header {
-            text-align: center;
-            margin-bottom: var(--spacing-large);
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
-        .terms-header h1 {
-            font-size: 32px;
-            margin-bottom: var(--spacing-normal);
-            background: linear-gradient(135deg, var(--special-gradient-start), var(--special-gradient-end));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        h1 {
+            color: #1a1a1a;
+            border-bottom: 3px solid #007AFF;
+            padding-bottom: 10px;
         }
-
-        .terms-content {
-            background: var(--background-card);
-            border-radius: var(--radius-standard);
-            padding: var(--spacing-large);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        h2 {
+            color: #2c3e50;
+            margin-top: 30px;
         }
-
+        h3 {
+            color: #34495e;
+        }
         .effective-date {
-            background: linear-gradient(135deg, rgba(232, 160, 137, 0.1), rgba(97, 42, 116, 0.1));
-            padding: var(--spacing-loose);
-            border-radius: var(--radius-standard);
-            margin-bottom: var(--spacing-large);
-            border-left: 4px solid var(--action-tarot-reading);
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #007AFF;
         }
-
-        .warning-box {
-            background: rgba(243, 93, 156, 0.1);
-            padding: var(--spacing-loose);
-            border-radius: var(--radius-standard);
-            margin: var(--spacing-loose) 0;
-            border-left: 4px solid var(--action-brand-pink);
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
         }
-
-        .terms-content h2 {
-            color: var(--text-strong);
-            font-size: 24px;
-            margin-top: var(--spacing-large);
-            margin-bottom: var(--spacing-normal);
-            padding-bottom: var(--spacing-tight);
-            border-bottom: 2px solid var(--structure-divider);
+        .contact-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
         }
-
-        .terms-content h3 {
-            color: var(--text-emphasis);
-            font-size: 20px;
-            margin-top: var(--spacing-loose);
-            margin-bottom: var(--spacing-tight);
+        ul li {
+            margin: 8px 0;
         }
-
-        .terms-content p {
-            color: var(--text-secondary);
-            line-height: var(--line-height-body);
-            margin-bottom: var(--spacing-normal);
-        }
-
-        .terms-content ul {
-            margin: var(--spacing-normal) 0;
-            padding-left: var(--spacing-loose);
-        }
-
-        .terms-content li {
-            color: var(--text-secondary);
-            margin-bottom: var(--spacing-tight);
-            line-height: var(--line-height-body);
-        }
-
-        .terms-content ol {
-            margin: var(--spacing-normal) 0;
-            padding-left: var(--spacing-loose);
-        }
-
-        .terms-content ol li {
-            margin-bottom: var(--spacing-tight);
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--spacing-normal);
-            margin: var(--spacing-loose) 0;
-        }
-
-        .feature-item {
-            background: var(--background-primary);
-            padding: var(--spacing-loose);
-            border-radius: var(--radius-standard);
+        .footer {
             text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
         }
-
-        .feature-icon {
-            font-size: 24px;
-            margin-bottom: var(--spacing-tight);
+        .lang-switcher {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 16px;
         }
-
-        .service-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: var(--spacing-loose) 0;
-            background: var(--background-primary);
-            border-radius: var(--radius-standard);
-            overflow: hidden;
-        }
-
-        .service-table th,
-        .service-table td {
-            padding: var(--spacing-normal);
-            text-align: left;
-            border-bottom: 1px solid var(--structure-divider);
-        }
-
-        .service-table th {
-            background: linear-gradient(135deg, rgba(232, 160, 137, 0.1), rgba(97, 42, 116, 0.1));
-            color: var(--text-strong);
-            font-weight: 600;
-        }
-
-        .contact-section {
-            background: linear-gradient(135deg, rgba(116, 211, 207, 0.1), rgba(121, 192, 124, 0.1));
-            padding: var(--spacing-loose);
-            border-radius: var(--radius-standard);
-            margin-top: var(--spacing-large);
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--spacing-tight);
-            color: var(--action-tarot-reading);
-            text-decoration: none;
-            margin-bottom: var(--spacing-loose);
-            font-weight: 500;
-            transition: all 0.2s ease;
-        }
-
-        .back-link:hover {
-            transform: translateX(-4px);
-        }
-
-        @media (max-width: 768px) {
-            .terms-container {
-                padding: var(--spacing-loose);
-            }
-
-            .terms-content {
-                padding: var(--spacing-loose);
-            }
-
-            .terms-header h1 {
-                font-size: 24px;
-            }
-
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .service-table {
-                font-size: 14px;
-            }
-
-            .service-table th,
-            .service-table td {
-                padding: var(--spacing-normal) var(--spacing-tight);
-            }
+        .lang-switcher select {
+            padding: 6px 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background: #fff;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="terms-container">
-            <a href="/" class="back-link">← 返回主页</a>
+        <div class="lang-switcher">
+            <label for="lang" style="margin-right:8px; color:#666;">语言 Language:</label>
+            <select id="lang" aria-label="Language selector">
+                <option value="zh">中文</option>
+                <option value="en">English</option>
+            </select>
+        </div>
 
-            <div class="terms-header">
-                <h1>使用条款</h1>
-                <p>欢迎使用未来日记，请仔细阅读以下使用条款</p>
+        <div id="content-zh">
+            <h1>使用条款 - Manitodo</h1>
+            
+            <div class="effective-date">
+                <strong>生效日期：</strong> 2025年9月25日<br>
+                <strong>最近更新：</strong> 2025年9月25日
             </div>
 
-            <div class="terms-content">
-                <div class="effective-date">
-                    <strong>生效日期：</strong>2024年1月15日<br>
-                    <strong>最后更新：</strong>2024年1月15日
-                </div>
+            <div class="highlight">
+                <strong>重要：</strong> 在使用 Manitodo 应用之前，请仔细阅读本《使用条款》。下载、安装或使用本应用即表示你同意受本条款约束。
+            </div>
 
-                <div class="warning-box">
-                    <p><strong>重要提醒：</strong>使用未来日记应用即表示您同意遵守本使用条款。如果您不同意这些条款，请不要使用我们的服务。</p>
-                </div>
+            <h2>1. 接受条款</h2>
+            <p>本《使用条款》（“条款”）构成你（“用户”或“你”）与 Manitodo 开发者（“我们”）之间具有法律约束力的协议，适用于你对 Manitodo 移动应用（“应用”）及相关服务的使用。</p>
 
-                <h2>1. 接受条款</h2>
+            <h2>2. 服务描述</h2>
+            <p>Manitodo 是一款目标设定与进展追踪应用，帮助用户通过以下方式可视化并达成目标：</p>
+            <ul>
+                <li>以“已完成时”描述面向未来的任务管理</li>
+                <li>进度追踪与复盘工具</li>
+                <li>汲取塔罗灵感的指引与洞见</li>
+                <li>基于订阅的高级功能</li>
+            </ul>
 
-                <p>欢迎使用未来日记（以下简称"本应用"）。通过下载、安装或使用本应用，您同意受本使用条款的约束。如果您不同意这些条款，请不要使用本应用。</p>
+            <h2>3. 用户资格</h2>
+            <p>使用本应用需年满 13 周岁。13 至 18 周岁的用户须在同意本条款的父母或法定监护人许可与监督下使用本应用。</p>
 
-                <h2>2. 服务描述</h2>
+            <h2>4. 账户与注册</h2>
+            <p>为使用某些功能，你可能需要创建账户。你同意：</p>
+            <ul>
+                <li>提供准确、最新且完整的信息</li>
+                <li>维护并更新你的账户信息</li>
+                <li>妥善保管登录凭据</li>
+                <li>对你账户下的所有活动负责</li>
+                <li>如发生未授权访问，立即通知我们</li>
+            </ul>
 
-                <h3>2.1 服务内容</h3>
-                <p>未来日记是一款情感驱动的任务管理应用，主要提供以下服务：</p>
+            <h2>5. 订阅条款</h2>
+            <h3>5.1 自动续订订阅</h3>
+            <p>Manitodo 提供自动续订的订阅计划，给予你访问高级功能的权限。所有订阅条款、价格、计费周期与续订政策以购买时应用内展示的信息为准，并受 Apple App Store 条款与条件管辖。</p>
 
-                <div class="feature-grid">
-                    <div class="feature-item">
-                        <div class="feature-icon">🎯</div>
-                        <h4>目标管理</h4>
-                        <p>创建和管理个人目标</p>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">📝</div>
-                        <h4>任务执行</h4>
-                        <p>智能任务分解和进度跟踪</p>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🎭</div>
-                        <h4>塔罗指引</h4>
-                        <p>个性化建议和思考角度</p>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">📊</div>
-                        <h4>成长记录</h4>
-                        <p>进度统计和成就回顾</p>
-                    </div>
-                </div>
+            <h3>5.2 订阅管理</h3>
+            <ul>
+                <li>订阅通过你的 Apple ID 账户进行管理</li>
+                <li>你可在 Apple ID 账户设置中查看、修改或取消订阅</li>
+                <li>取消与退款政策遵循 Apple App Store 指南</li>
+                <li>任何免费试用均受 Apple 的标准条款约束</li>
+            </ul>
 
-                <h3>2.2 服务限制</h3>
-                <p>本应用提供的服务可能存在以下限制：</p>
+            <h2>6. 合理使用</h2>
+            <p>你同意不将本应用用于以下行为：</p>
+            <ul>
+                <li>违反任何法律、法规或第三方权利</li>
+                <li>上传有害、冒犯或不当内容</li>
+                <li>试图入侵、逆向工程或破坏应用安全</li>
+                <li>未经同意将应用用于任何商业目的</li>
+                <li>分享你的账户凭据给他人</li>
+                <li>创建虚假账户或歪曲身份</li>
+            </ul>
+
+            <h2>7. 隐私与数据保护</h2>
+            <p>我们依照适用的数据保护法律法规处理个人数据。我们对你个人信息的收集、使用与保护受《隐私政策》约束，《隐私政策》通过引用并入本条款。我们致力于保护你的隐私并负责任地处理你的数据。</p>
+
+            <h2>8. 知识产权</h2>
+            <p>本应用及其全部内容、特性与功能归开发者所有，并受知识产权法保护。我们授予你一项有限的、非排他、不可转让的许可，仅可将本应用用于个人目的。</p>
+
+            <h2>9. 内容与数据</h2>
+            <h3>9.1 你的内容</h3>
+            <p>你保留在应用中创建的内容之所有权。使用本应用即表示你授予我们存储、处理与展示你内容的许可，仅为向你提供服务之目的。</p>
+
+            <h3>9.2 塔罗与指引功能</h3>
+            <div class="highlight">
+                <strong>重要免责声明：</strong> 本应用提供的塔罗解读与指引仅供娱乐与自我反思之用，不应被视为专业意见、医疗建议、对未来事件的预测，或专业咨询的替代。对于重要决策，请自行审慎判断。
+            </div>
+
+            <h2>10. 服务可用性与维护</h2>
+            <p>我们努力提供可靠的服务，但不作以下保证：</p>
+            <ul>
+                <li>不间断或无错误的运行</li>
+                <li>服务满足你全部需求</li>
+                <li>在维护或技术问题期间的可用性</li>
+                <li>与所有设备或操作系统版本的兼容性</li>
+            </ul>
+
+            <h2>11. 免责声明与责任限制</h2>
+            <div class="highlight">
+                <strong>重要免责声明：</strong>
                 <ul>
-                    <li>免费版用户只能创建1个目标</li>
-                    <li>部分高级功能需要订阅付费</li>
-                    <li>AI功能需要网络连接</li>
-                    <li>音频解读功能仅限付费用户</li>
+                    <li>本应用按“现状”提供，不作任何形式的保证</li>
+                    <li>对于基于应用内容所作决定，我们不承担责任</li>
+                    <li>塔罗解读仅供娱乐用途</li>
+                    <li>我们的总责任以你过去12个月为服务支付的金额为上限</li>
+                    <li>对于间接、附带或后果性损害，我们不承担责任</li>
                 </ul>
+            </div>
 
-                <h2>3. 用户账户</h2>
+            <h2>12. 终止</h2>
+            <p>如出现以下情形，我们可随时暂停或终止你对应用的访问：</p>
+            <ul>
+                <li>违反本条款</li>
+                <li>可疑或欺诈活动</li>
+                <li>长期不活跃</li>
+                <li>法律或监管要求</li>
+                <li>服务中止</li>
+            </ul>
 
-                <h3>3.1 账户注册</h3>
-                <p>使用本应用需要通过 Apple ID 进行身份验证。您同意：</p>
-                <ul>
-                    <li>提供真实、准确、完整的个人信息</li>
-                    <li>维护账户的安全性，不要与他人共享</li>
-                    <li>及时更新个人信息</li>
-                    <li>对账户下的所有活动负责</li>
-                </ul>
+            <h2>13. 更新与变更</h2>
+            <p>我们保留以下权利：</p>
+            <ul>
+                <li>更新应用并增加新功能</li>
+                <li>修改本条款（对于重大变更会给予合理通知）</li>
+                <li>调整服务功能或可用性</li>
+            </ul>
 
-                <h3>3.2 账户安全</h3>
-                <p>您负责保护您的账户安全。如果发现账户被未经授权使用，请立即：</p>
-                <ul>
-                    <li>修改 Apple ID 密码</li>
-                    <li>联系我们的客服团队</li>
-                    <li>检查应用内的数据安全</li>
-                </ul>
+            <h2>14. 争议解决</h2>
+            <h3>14.1 适用法律</h3>
+            <p>本条款受中华人民共和国法律管辖并按其解释，不考虑法律冲突原则。</p>
 
-                <h2>4. 使用规则</h2>
+            <h3>14.2 争议处理流程</h3>
+            <p>任何争议将通过以下方式解决：</p>
+            <ol>
+                <li>本着诚信原则的直接协商</li>
+                <li>协商不成时进行调解</li>
+                <li>必要时在中国有管辖权的法院提起诉讼</li>
+            </ol>
 
-                <h3>4.1 允许的使用</h3>
-                <p>您可以将本应用用于：</p>
-                <ul>
-                    <li>个人目标管理和任务跟踪</li>
-                    <li>记录个人成长和进步</li>
-                    <li>获取个性化的建议和指引</li>
-                    <li>与信任的朋友分享进展（可选）</li>
-                </ul>
+            <h2>15. Apple App Store 条款</h2>
+            <p>如果你从 Apple App Store 下载本应用，你确认并同意：</p>
+            <ul>
+                <li>本条款仅在你与应用开发者之间订立，与 Apple 无关</li>
+                <li>Apple 没有义务为本应用提供支持</li>
+                <li>Apple 对与本应用相关的任何主张不承担责任</li>
+                <li>就你对本应用的使用而言，Apple 是本条款的第三方受益人</li>
+                <li>如有冲突，与 App Store 相关的事项以 Apple 的 App Store 条款为准</li>
+            </ul>
 
-                <h3>4.2 禁止的使用</h3>
-                <p>您不得将本应用用于：</p>
-                <ul>
-                    <li>任何非法或欺诈性活动</li>
-                    <li>传播恶意软件或病毒</li>
-                    <li>侵犯他人隐私或知识产权</li>
-                    <li>发送垃圾邮件或骚扰信息</li>
-                    <li>试图破坏应用的正常运行</li>
-                    <li>反向工程或破解应用</li>
-                </ul>
+            <h2>16. 可分割性</h2>
+            <p>若本条款的任何规定被认定为不可执行，其余规定仍继续完全有效。</p>
 
-                <h2>5. 订阅服务</h2>
+            <h2>17. 联系方式</h2>
+            <div class="contact-info">
+                <h3>开发者联系信息</h3>
+                <p><strong>开发者：</strong> 温嘉琪</p>
+                <p><strong>邮箱：</strong> wenjiaqi8255@outlook.com</p>
+                <p><strong>所在地：</strong> 中国</p>
+                <p><strong>ICP备案：</strong> 京ICP备2025135739号-2A</p>
+                <p><strong>响应时间：</strong> 一般在 48-72 小时内回复</p>
+                <p><strong>支持时间：</strong> 周一至周五，9:00 - 18:00（中欧时间）</p>
+            </div>
 
-                <h3>5.1 订阅计划</h3>
-                <p>我们提供以下订阅选项：</p>
+            <h2>18. 确认</h2>
+            <p>使用 Manitodo 应用即表示你已阅读、理解并同意受本《使用条款》约束。</p>
 
-                <table class="service-table">
-                    <tr>
-                        <th>功能</th>
-                        <th>免费版</th>
-                        <th>付费版</th>
-                    </tr>
-                    <tr>
-                        <td>目标数量</td>
-                        <td>1个</td>
-                        <td>无限制</td>
-                    </tr>
-                    <tr>
-                        <td>任务生成</td>
-                        <td>基础</td>
-                        <td>高级AI</td>
-                    </tr>
-                    <tr>
-                        <td>塔罗解读</td>
-                        <td>文字</td>
-                        <td>文字+音频</td>
-                    </tr>
-                    <tr>
-                        <td>数据同步</td>
-                        <td>限制</td>
-                        <td>完整</td>
-                    </tr>
-                    <tr>
-                        <td>云端备份</td>
-                        <td>无</td>
-                        <td>有</td>
-                    </tr>
-                </table>
-
-                <h3>5.2 订阅条款</h3>
-                <ul>
-                    <li>订阅通过 Apple App Store 进行计费</li>
-                    <li>订阅将自动续订，除非您提前取消</li>
-                    <li>取消订阅后，您仍可使用到当前计费周期结束</li>
-                    <li>我们不提供退款服务，除非法律要求</li>
-                </ul>
-
-                <h2>6. 知识产权</h2>
-
-                <h3>6.1 应用所有权</h3>
-                <p>未来日记应用及其所有内容，包括但不限于：</p>
-                <ul>
-                    <li>源代码和目标代码</li>
-                    <li>用户界面和设计元素</li>
-                    <li>文字、图形、徽标</li>
-                    <li>塔罗牌解读内容</li>
-                    <li>AI生成的内容和建议</li>
-                </ul>
-                <p>均为未来日记团队或其许可方的财产，受知识产权法保护。</p>
-
-                <h3>6.2 用户内容</h3>
-                <p>您保留在应用中创建的个人内容的所有权，但您授予我们：</p>
-                <ul>
-                    <li>使用、复制、修改您的内容以提供服务</li>
-                    <li>在必要时显示和分发您的内容</li>
-                    <li>分析使用数据以改进服务</li>
-                </ul>
-
-                <h2>7. 隐私保护</h2>
-
-                <p>我们重视您的隐私。关于我们如何收集、使用和保护您的个人信息，请参阅我们的<a href="/privacy">隐私政策</a>。</p>
-
-                <h2>8. 免责声明</h2>
-
-                <h3>8.1 服务按"现状"提供</h3>
-                <p>本应用按"现状"和"可用"基础提供，我们不提供任何明示或暗示的保证，包括但不限于：</p>
-                <ul>
-                    <li>服务的适销性或特定用途适用性</li>
-                    <li>服务的准确性、可靠性或完整性</li>
-                    <li>服务的连续性或错误修复</li>
-                </ul>
-
-                <h3>8.2 责任限制</h3>
-                <p>在任何情况下，我们对您的责任限于：</p>
-                <ul>
-                    <li>您为使用服务支付的金额</li>
-                    <li>直接损失，不包括间接、附带或后果性损失</li>
-                    <li>法律允许的最大范围</li>
-                </ul>
-
-                <h2>9. 赔偿</h2>
-
-                <p>您同意赔偿并使我们免受任何索赔、损失、损害、责任、成本和费用（包括合理的律师费）的损害，这些索赔源于：</p>
-                <ul>
-                    <li>您对本使用条款的违反</li>
-                    <li>您对第三方权利的侵犯</li>
-                    <li>您在使用服务时的不当行为</li>
-                </ul>
-
-                <h2>10. 终止服务</h2>
-
-                <h3>10.1 终止权利</h3>
-                <p>我们保留在任何时候终止或暂停您访问服务的权利，原因包括但不限于：</p>
-                <ul>
-                    <li>违反本使用条款</li>
-                    <li>进行欺诈或非法活动</li>
-                    <li>对服务造成技术干扰</li>
-                    <li>法律或监管要求</li>
-                </ul>
-
-                <h3>10.2 终止效果</h3>
-                <p>服务终止后：</p>
-                <ul>
-                    <li>您访问服务的权利将立即停止</li>
-                    <li>您可能无法访问您的数据</li>
-                    <li>我们保留保留或删除您数据的权利</li>
-                    <li>任何已支付的费用不予退还</li>
-                </ul>
-
-                <h2>11. 条款修改</h2>
-
-                <h3>11.1 修改权利</h3>
-                <p>我们保留随时修改这些使用条款的权利。修改将在以下情况下生效：</p>
-                <ul>
-                    <li>在应用内发布新条款</li>
-                    <li>通过电子邮件通知用户</li>
-                    <li>在网站上发布更新公告</li>
-                </ul>
-
-                <h3>11.2 继续使用</h3>
-                <p>如果我们在修改条款后继续使用服务，即表示您接受修改后的条款。如果您不同意修改后的条款，应停止使用服务。</p>
-
-                <h2>12. 第三方服务</h2>
-
-                <h3>12.1 集成服务</h3>
-                <p>本应用可能集成第三方服务，包括：</p>
-                <ul>
-                    <li>Apple Sign in（身份验证）</li>
-                    <li>Supabase（数据存储）</li>
-                    <li>AI 服务提供商（智能功能）</li>
-                </ul>
-
-                <h3>12.2 第三方条款</h3>
-                <p>使用第三方服务受这些服务提供商的条款约束。我们不对第三方服务的内容、隐私政策或做法负责。</p>
-
-                <h2>13. 通知和沟通</h2>
-
-                <p>我们可能通过以下方式与您沟通：</p>
-                <ul>
-                    <li>在应用内显示通知</li>
-                    <li>发送电子邮件到您的注册邮箱</li>
-                    <li>在应用内发布公告</li>
-                    <li>通过 Apple 的通知系统</li>
-                </ul>
-
-                <h2>14. 不可抗力</h2>
-
-                <p>我们对因以下原因导致的任何服务中断或延迟不承担责任：</p>
-                <ul>
-                    <li>自然灾害（地震、洪水等）</li>
-                    <li>战争、恐怖主义或暴乱</li>
-                    <li>政府行为或法律变更</li>
-                    <li>互联网服务提供商故障</li>
-                    <li>第三方服务中断</li>
-                </ul>
-
-                <h2>15. 争议解决</h2>
-
-                <h3>15.1 协商解决</h3>
-                <p>我们鼓励通过友好协商解决因本使用条款引起的争议。</p>
-
-                <h3>15.2 适用法律</h3>
-                <p>本使用条款受中华人民共和国法律管辖。</p>
-
-                <h3>15.3 争议管辖</h3>
-                <p>任何争议应提交有管辖权的人民法院解决。</p>
-
-                <h2>16. 一般条款</h2>
-
-                <h3>16.1 完整协议</h3>
-                <p>本使用条款构成您与我们之间的完整协议，取代所有先前的口头或书面协议。</p>
-
-                <h3>16.2 可分割性</h3>
-                <p>如果本使用条款的任何条款被认定为无效或不可执行，其余条款仍然有效。</p>
-
-                <h3>16.3 弃权</h3>
-                <p>我们未能执行任何条款不构成对该条款的弃权。</p>
-
-                <h3>16.4 转让</h3>
-                <p>未经我们事先书面同意，您不得转让本使用项下的任何权利或义务。</p>
-
-                <div class="contact-section">
-                    <h3>联系我们</h3>
-                    <p>如果您对本使用条款有任何疑问或建议，请通过以下方式联系我们：</p>
-                    <ul>
-                        <li><strong>邮箱：</strong>support@manitodo.app</li>
-                        <li><strong>应用内反馈：</strong>通过设置页面的反馈功能</li>
-                        <li><strong>响应时间：</strong>我们会在 3-5 个工作日内回复</li>
-                    </ul>
-                </div>
-
-                <div class="warning-box">
-                    <p><strong>最后提醒：</strong>使用本应用前请确保您已完全理解并同意本使用条款的所有内容。如有任何疑问，请及时联系我们。</p>
-                </div>
+            <div class="footer">
+                <p>© 2025 Manitodo. 保留所有权利。</p>
+                <p>本文件最近更新于 2025 年 9 月 25 日</p>
             </div>
         </div>
+
+        <div id="content-en" style="display:none;">
+        <h1>Terms of Use - Manitodo</h1>
+        
+        <div class="effective-date">
+            <strong>Effective Date:</strong> September 25, 2025<br>
+            <strong>Last Updated:</strong> September 25, 2025
+        </div>
+
+        <div class="highlight">
+            <strong>Important:</strong> Please read these Terms of Use carefully before using the Manitodo application. By downloading, installing, or using our app, you agree to be bound by these terms.
+        </div>
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>These Terms of Use ("Terms") constitute a legally binding agreement between you ("User" or "you") and the developer of Manitodo ("we," "us," or "our") regarding your use of the Manitodo mobile application ("App") and related services.</p>
+
+        <h2>2. Description of Service</h2>
+        <p>Manitodo is a goal-setting and progress tracking application that helps users visualize and achieve their objectives through:</p>
+        <ul>
+            <li>Future-oriented task management using completed tense descriptions</li>
+            <li>Progress tracking and reflection tools</li>
+            <li>Tarot-inspired guidance and insights</li>
+            <li>Subscription-based premium features</li>
+        </ul>
+
+        <h2>3. User Eligibility</h2>
+        <p>You must be at least 13 years old to use this App. If you are between 13 and 18 years old, you may only use the App with the permission and supervision of a parent or legal guardian who agrees to these Terms.</p>
+
+        <h2>4. User Account and Registration</h2>
+        <p>To access certain features, you may need to create an account. You agree to:</p>
+        <ul>
+            <li>Provide accurate, current, and complete information</li>
+            <li>Maintain and update your account information</li>
+            <li>Keep your login credentials secure and confidential</li>
+            <li>Be responsible for all activities under your account</li>
+            <li>Notify us immediately of any unauthorized access</li>
+        </ul>
+
+        <h2>5. Subscription Terms</h2>
+        <h3>5.1 Auto-Renewable Subscriptions</h3>
+        <p>Manitodo offers auto-renewable subscription plans that provide access to premium features. All subscription terms, pricing, billing cycles, and renewal policies are as displayed within the App at the time of purchase and are governed by Apple's App Store terms and conditions.</p>
+
+        <h3>5.2 Subscription Management</h3>
+        <ul>
+            <li>Subscriptions are managed through your Apple ID account</li>
+            <li>You can view, modify, or cancel subscriptions in your Apple ID Account Settings</li>
+            <li>Cancellation and refund policies follow Apple App Store guidelines</li>
+            <li>Any free trial periods are subject to Apple's standard terms</li>
+        </ul>
+
+        <h2>6. Acceptable Use</h2>
+        <p>You agree NOT to use the App to:</p>
+        <ul>
+            <li>Violate any laws, regulations, or third-party rights</li>
+            <li>Upload harmful, offensive, or inappropriate content</li>
+            <li>Attempt to hack, reverse engineer, or compromise the App's security</li>
+            <li>Use the App for any commercial purposes without our consent</li>
+            <li>Share your account credentials with others</li>
+            <li>Create fake accounts or misrepresent your identity</li>
+        </ul>
+
+        <h2>7. Privacy and Data Protection</h2>
+        <p>We process personal data in accordance with applicable data protection laws and regulations. Our collection, use, and protection of your personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference. We are committed to protecting your privacy and handling your data responsibly.</p>
+
+        <h2>8. Intellectual Property Rights</h2>
+        <p>The App and all content, features, and functionality are owned by the developer and protected by intellectual property laws. You are granted a limited, non-exclusive, non-transferable license to use the App for personal purposes only.</p>
+
+        <h2>9. Content and Data</h2>
+        <h3>9.1 Your Content</h3>
+        <p>You retain ownership of content you create in the App. By using the App, you grant us a license to store, process, and display your content solely to provide the service to you.</p>
+
+        <h3>9.2 Tarot and Guidance Features</h3>
+        <div class="highlight">
+            <strong>Important Disclaimer:</strong> The tarot readings and guidance provided are for entertainment and self-reflection purposes only. They should not be considered as professional advice, medical guidance, predictions of future events, or substitutes for professional consultation. Use your own judgment for important life decisions.
+        </div>
+
+        <h2>10. Service Availability and Maintenance</h2>
+        <p>We strive to provide reliable service, but cannot guarantee:</p>
+        <ul>
+            <li>Uninterrupted or error-free operation</li>
+            <li>That the service will meet all your requirements</li>
+            <li>Availability during maintenance periods or technical issues</li>
+            <li>Compatibility with all devices or operating system versions</li>
+        </ul>
+
+        <h2>11. Disclaimers and Limitations</h2>
+        <div class="highlight">
+            <strong>Important Disclaimers:</strong>
+            <ul>
+                <li>The App is provided "as is" without warranties of any kind</li>
+                <li>We are not liable for decisions made based on App content</li>
+                <li>Tarot readings are for entertainment purposes only</li>
+                <li>Our total liability is limited to the amount you paid for the service in the past 12 months</li>
+                <li>We are not liable for indirect, incidental, or consequential damages</li>
+            </ul>
+        </div>
+
+        <h2>12. Termination</h2>
+        <p>We may suspend or terminate your access to the App at any time for:</p>
+        <ul>
+            <li>Violation of these Terms</li>
+            <li>Suspicious or fraudulent activity</li>
+            <li>Extended periods of inactivity</li>
+            <li>Legal or regulatory requirements</li>
+            <li>Discontinuation of the service</li>
+        </ul>
+
+        <h2>13. Updates and Changes</h2>
+        <p>We reserve the right to:</p>
+        <ul>
+            <li>Update the App and add new features</li>
+            <li>Modify these Terms (with reasonable notice for material changes)</li>
+            <li>Modify service features or availability</li>
+        </ul>
+
+        <h2>14. Dispute Resolution</h2>
+        <h3>14.1 Governing Law</h3>
+        <p>These Terms are governed by and construed in accordance with the laws of the People's Republic of China, without regard to conflict of law principles.</p>
+
+        <h3>14.2 Dispute Resolution Process</h3>
+        <p>Any disputes will be resolved through:</p>
+        <ol>
+            <li>Direct negotiation in good faith</li>
+            <li>Mediation if negotiation fails</li>
+            <li>Legal proceedings in appropriate Chinese courts if necessary</li>
+        </ol>
+
+        <h2>15. Apple App Store Terms</h2>
+        <p>If you download the App from the Apple App Store, you acknowledge that:</p>
+        <ul>
+            <li>These Terms are between you and the App developer, not Apple</li>
+            <li>Apple has no obligation to provide support for the App</li>
+            <li>Apple is not responsible for any claims related to the App</li>
+            <li>Apple is a third-party beneficiary of these Terms regarding your use of the App</li>
+            <li>In case of conflict, Apple's App Store terms take precedence for App Store-related matters</li>
+        </ul>
+
+        <h2>16. Severability</h2>
+        <p>If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect.</p>
+
+        <h2>17. Contact Information</h2>
+        <div class="contact-info">
+            <h3>Developer Contact Information</h3>
+            <p><strong>Developer:</strong> Wen Jiaqi</p>
+            <p><strong>Email:</strong> wenjiaqi8255@outlook.com</p>
+            <p><strong>Location:</strong> China</p>
+            <p><strong>ICP Registration:</strong> 京ICP备2025135739号-2A</p>
+            <p><strong>Response Time:</strong> We typically respond within 48-72 hours</p>
+            <p><strong>Support Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM (CET)</p>
+        </div>
+
+        <h2>18. Acknowledgment</h2>
+        <p>By using the Manitodo App, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use.</p>
+
+        <div class="footer">
+            <p>&copy; 2025 Manitodo. All rights reserved.</p>
+            <p>This document was last updated on September 25, 2025</p>
+        </div>
+        </div>
     </div>
-
     <script>
-        // 平滑滚动
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+        (function() {
+            var select = document.getElementById('lang');
+            var zh = document.getElementById('content-zh');
+            var en = document.getElementById('content-en');
+            var saved = localStorage.getItem('manitodo_terms_lang');
+            var initial = saved === 'en' ? 'en' : 'zh';
+            select.value = initial;
+            function apply(lang) {
+                if (lang === 'en') {
+                    zh.style.display = 'none';
+                    en.style.display = '';
+                    document.documentElement.lang = 'en';
+                } else {
+                    en.style.display = 'none';
+                    zh.style.display = '';
+                    document.documentElement.lang = 'zh';
                 }
+            }
+            apply(initial);
+            select.addEventListener('change', function() {
+                var lang = select.value;
+                localStorage.setItem('manitodo_terms_lang', lang);
+                apply(lang);
             });
-        });
-
-        // 添加页面加载动画
-        window.addEventListener('load', function() {
-            document.querySelectorAll('.terms-content > *').forEach((element, index) => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(20px)';
-                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-
-                setTimeout(() => {
-                    element.style.opacity = '1';
-                    element.style.transform = 'translateY(0)';
-                }, index * 100);
-            });
-        });
+        })();
     </script>
 </body>
 </html>

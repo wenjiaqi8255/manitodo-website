@@ -1,391 +1,295 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隐私政策 - 未来日记</title>
-    <meta name="description" content="未来日记的隐私政策，我们致力于保护您的个人信息安全">
-    <link rel="stylesheet" href="styles.css">
+    <title>manitodo 隐私政策</title>
     <style>
-        .privacy-container {
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             max-width: 800px;
             margin: 0 auto;
-            padding: var(--spacing-large) 0;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
         }
-
-        .privacy-header {
-            text-align: center;
-            margin-bottom: var(--spacing-large);
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
-        .privacy-header h1 {
-            font-size: 32px;
-            margin-bottom: var(--spacing-normal);
-            background: linear-gradient(135deg, var(--special-gradient-start), var(--special-gradient-end));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        h1 {
+            color: #1a1a1a;
+            border-bottom: 3px solid #007AFF;
+            padding-bottom: 10px;
         }
-
-        .privacy-content {
-            background: var(--background-card);
-            border-radius: var(--radius-standard);
-            padding: var(--spacing-large);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        h2 {
+            color: #2c3e50;
+            margin-top: 30px;
         }
-
+        h3 {
+            color: #34495e;
+        }
         .effective-date {
-            background: linear-gradient(135deg, rgba(232, 160, 137, 0.1), rgba(97, 42, 116, 0.1));
-            padding: var(--spacing-loose);
-            border-radius: var(--radius-standard);
-            margin-bottom: var(--spacing-large);
-            border-left: 4px solid var(--action-tarot-reading);
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #007AFF;
         }
-
-        .highlight-box {
-            background: rgba(236, 131, 34, 0.1);
-            padding: var(--spacing-loose);
-            border-radius: var(--radius-standard);
-            margin: var(--spacing-loose) 0;
-            border-left: 4px solid var(--action-goal-create);
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
         }
-
-        .privacy-content h2 {
-            color: var(--text-strong);
-            font-size: 24px;
-            margin-top: var(--spacing-large);
-            margin-bottom: var(--spacing-normal);
-            padding-bottom: var(--spacing-tight);
-            border-bottom: 2px solid var(--structure-divider);
+        .contact-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
         }
-
-        .privacy-content h3 {
-            color: var(--text-emphasis);
-            font-size: 20px;
-            margin-top: var(--spacing-loose);
-            margin-bottom: var(--spacing-tight);
+        ul li {
+            margin: 8px 0;
         }
-
-        .privacy-content p {
-            color: var(--text-secondary);
-            line-height: var(--line-height-body);
-            margin-bottom: var(--spacing-normal);
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
         }
-
-        .privacy-content ul {
-            margin: var(--spacing-normal) 0;
-            padding-left: var(--spacing-loose);
-        }
-
-        .privacy-content li {
-            color: var(--text-secondary);
-            margin-bottom: var(--spacing-tight);
-            line-height: var(--line-height-body);
-        }
-
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: var(--spacing-loose) 0;
-            background: var(--background-primary);
-            border-radius: var(--radius-standard);
-            overflow: hidden;
-        }
-
-        .data-table th,
-        .data-table td {
-            padding: var(--spacing-normal);
-            text-align: left;
-            border-bottom: 1px solid var(--structure-divider);
-        }
-
-        .data-table th {
-            background: linear-gradient(135deg, rgba(232, 160, 137, 0.1), rgba(97, 42, 116, 0.1));
-            color: var(--text-strong);
-            font-weight: 600;
-        }
-
-        .contact-section {
-            background: linear-gradient(135deg, rgba(116, 211, 207, 0.1), rgba(121, 192, 124, 0.1));
-            padding: var(--spacing-loose);
-            border-radius: var(--radius-standard);
-            margin-top: var(--spacing-large);
-        }
-
-        .back-link {
-            display: inline-flex;
+        .lang-switcher {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+            gap: 10px;
             align-items: center;
-            gap: var(--spacing-tight);
-            color: var(--action-tarot-reading);
-            text-decoration: none;
-            margin-bottom: var(--spacing-loose);
+        }
+        .lang-btn {
+            padding: 8px 16px;
+            border: 2px solid #007AFF;
+            border-radius: 6px;
+            background: white;
+            color: #007AFF;
+            cursor: pointer;
+            font-size: 14px;
             font-weight: 500;
-            transition: all 0.2s ease;
+            transition: all 0.3s ease;
         }
-
-        .back-link:hover {
-            transform: translateX(-4px);
+        .lang-btn:hover {
+            background: #f0f8ff;
         }
-
-        @media (max-width: 768px) {
-            .privacy-container {
-                padding: var(--spacing-loose);
-            }
-
-            .privacy-content {
-                padding: var(--spacing-loose);
-            }
-
-            .privacy-header h1 {
-                font-size: 24px;
-            }
-
-            .data-table {
-                font-size: 14px;
-            }
-
-            .data-table th,
-            .data-table td {
-                padding: var(--spacing-normal) var(--spacing-tight);
-            }
+        .lang-btn.active {
+            background: #007AFF;
+            color: white;
+        }
+        .hidden {
+            display: none;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="privacy-container">
-            <a href="/" class="back-link">← 返回主页</a>
+        <div class="lang-switcher">
+            <button class="lang-btn active" onclick="switchLanguage('zh')">中文</button>
+            <button class="lang-btn" onclick="switchLanguage('en')">English</button>
+        </div>
+        
+        <!-- Chinese Content -->
+        <div id="content-zh">
+            <h1>manitodo 隐私政策</h1>
+            <p class="update-date">最后更新：2025年9月14日</p>
+    
+    <h2>简介</h2>
+    <p>manitodo（"我们"）重视您的隐私。本隐私政策说明我们如何收集、使用和保护您的个人信息。</p>
+    
+    <h2>我们收集的信息</h2>
+    <h3>账户信息</h3>
+    <ul>
+        <li><strong>电子邮件地址：</strong>用于账户登录和管理</li>
+        <li><strong>用户ID：</strong>用于识别您的账户</li>
+    </ul>
+    
+    <h3>应用内容</h3>
+    <ul>
+        <li><strong>目标和愿景：</strong>您设定的个人目标和愿景内容</li>
+        <li><strong>进度记录：</strong>您记录的成长进展和感受</li>
+        <li><strong>AI对话内容：</strong>与AI助手的交互内容</li>
+    </ul>
+    
+    <h3>使用数据</h3>
+    <ul>
+        <li><strong>应用使用情况：</strong>您如何使用应用功能，用于改进用户体验</li>
+        <li><strong>技术数据：</strong>崩溃报告和性能数据，用于修复问题</li>
+    </ul>
+    
+    <h2>信息使用方式</h2>
+    <p>我们使用收集的信息来：</p>
+    <ul>
+        <li>提供应用的核心功能和服务</li>
+        <li>为您生成个性化的AI回应和建议</li>
+        <li>同步您在不同设备间的数据</li>
+        <li>改进应用性能和用户体验</li>
+        <li>提供技术支持</li>
+    </ul>
+    
+    <h2>信息共享</h2>
+    <p>我们不会出售、租借或交易您的个人信息。我们仅在以下情况下共享信息：</p>
+    <ul>
+        <li><strong>AI服务提供商：</strong>我们使用第三方AI服务处理您的文本内容，以提供智能回应</li>
+        <li><strong>云服务提供商：</strong>我们使用云服务安全存储您的数据</li>
+        <li><strong>法律要求：</strong>在法律要求或保护我们合法权益时</li>
+    </ul>
+    
+    <h2>数据安全</h2>
+    <p>我们采用行业标准的安全措施保护您的数据：</p>
+    <ul>
+        <li>数据传输采用SSL加密</li>
+        <li>存储在安全的云服务器上</li>
+        <li>定期进行安全审查和更新</li>
+    </ul>
+    
+    <h2>您的权利</h2>
+    <p>您有权：</p>
+    <ul>
+        <li>查看我们持有的关于您的信息</li>
+        <li>要求更正不准确的信息</li>
+        <li>要求删除您的账户和相关数据</li>
+        <li>导出您的数据</li>
+    </ul>
+    
+    <h2>数据保留</h2>
+    <p>我们会在您使用服务期间保留您的数据。如果您删除账户，我们会在30天内删除您的个人数据（法律要求保留的除外）。</p>
+    
+    <h2>儿童隐私</h2>
+    <p>我们的服务不针对13岁以下儿童。如果我们发现收集了13岁以下儿童的个人信息，我们会立即删除。</p>
+    
+    <h2>政策更新</h2>
+    <p>我们可能会不时更新本隐私政策。重大变更将通过应用内通知或电子邮件告知您。</p>
+    
+    <h2>联系我们</h2>
+    <p>如果您对本隐私政策有任何问题，请通过以下方式联系我们：</p>
+    <ul>
+        <li>邮箱：wenjiaqi8255@outlook.com</li>
+    </ul>
+            
+            <hr>
+            <p class="update-date">此隐私政策适用于manitodo应用的所有版本。</p>
+        </div>
 
-            <div class="privacy-header">
-                <h1>隐私政策</h1>
-                <p>未来日记致力于保护您的个人信息安全</p>
-            </div>
-
-            <div class="privacy-content">
-                <div class="effective-date">
-                    <strong>生效日期：</strong>2024年1月15日<br>
-                    <strong>最后更新：</strong>2024年1月15日
-                </div>
-
-                <div class="highlight-box">
-                    <p><strong>重要提示：</strong>使用未来日记应用即表示您同意本隐私政策中描述的做法。请仔细阅读以下内容，了解我们如何收集、使用和保护您的个人信息。</p>
-                </div>
-
-                <h2>1. 信息收集</h2>
-
-                <h3>1.1 我们收集的信息</h3>
-                <p>为了提供更好的服务体验，我们可能会收集以下类型的信息：</p>
-
-                <table class="data-table">
-                    <tr>
-                        <th>信息类型</th>
-                        <th>收集目的</th>
-                        <th>使用方式</th>
-                    </tr>
-                    <tr>
-                        <td>用户账户信息<br>（Apple ID）</td>
-                        <td>身份认证和数据同步</td>
-                        <td>用于登录和云端数据同步</td>
-                    </tr>
-                    <tr>
-                        <td>目标与任务数据</td>
-                        <td>提供核心功能服务</td>
-                        <td>存储在本地和云端，支持多设备同步</td>
-                    </tr>
-                    <tr>
-                        <td>进度记录</td>
-                        <td>功能使用分析</td>
-                        <td>用于改进用户体验和功能优化</td>
-                    </tr>
-                    <tr>
-                        <td>使用统计</td>
-                        <td>应用性能优化</td>
-                        <td>匿名化处理，用于产品改进</td>
-                    </tr>
-                </table>
-
-                <h3>1.2 信息收集方式</h3>
-                <ul>
-                    <li><strong>主动提供：</strong>您在创建目标、记录进度时主动输入的信息</li>
-                    <li><strong>自动收集：</strong>应用使用过程中自动生成的使用数据和统计信息</li>
-                    <li><strong>第三方集成：</strong>通过 Apple Sign in 和 Supabase 服务收集的必要信息</li>
-                </ul>
-
-                <h2>2. 信息使用</h2>
-
-                <h3>2.1 使用目的</h3>
-                <p>我们使用收集的信息主要用于：</p>
-                <ul>
-                    <li>提供和维护未来日记的核心功能</li>
-                    <li>改善用户体验和优化产品功能</li>
-                    <li>提供客户支持和技术服务</li>
-                    <li>确保应用安全和防止欺诈行为</li>
-                    <li>遵守相关法律法规要求</li>
-                </ul>
-
-                <h3>2.2 信息共享</h3>
-                <p>我们不会出售、交易或转让您的个人信息给第三方，除非：</p>
-                <ul>
-                    <li>获得您的明确同意</li>
-                    <li>法律法规要求我们必须这样做</li>
-                    <li>为了保护我们的合法权益</li>
-                    <li>在合并、收购或资产出售的情况下</li>
-                </ul>
-
-                <h2>3. 数据安全</h2>
-
-                <h3>3.1 安全措施</h3>
-                <p>我们采取了以下安全措施来保护您的个人信息：</p>
-                <ul>
-                    <li><strong>加密存储：</strong>本地数据采用加密方式存储</li>
-                    <li><strong>安全传输：</strong>数据在传输过程中使用SSL/TLS加密</li>
-                    <li><strong>访问控制：</strong>严格的内部访问权限管理</li>
-                    <li><strong>定期审计：</strong>定期进行安全检查和风险评估</li>
-                </ul>
-
-                <h3>3.2 数据保留</h3>
-                <p>我们会根据以下原则保留您的数据：</p>
-                <ul>
-                    <li><strong>必要性原则：</strong>仅在提供服务所需的时间内保留数据</li>
-                    <li><strong>用户选择：</strong>您可以随时删除账户和相关数据</li>
-                    <li><strong>法律要求：</strong>遵守相关法律法规的数据保留要求</li>
-                </ul>
-
-                <h2>4. 用户权利</h2>
-
-                <h3>4.1 您的权利</h3>
-                <p>根据相关法律法规，您享有以下权利：</p>
-                <ul>
-                    <li><strong>访问权：</strong>查看我们持有的关于您的个人信息</li>
-                    <li><strong>更正权：</strong>要求更正不准确或不完整的个人信息</li>
-                    <li><strong>删除权：</strong>要求删除您的个人信息</li>
-                    <li><strong>限制处理权：</strong>限制对您的个人信息的处理</li>
-                    <li><strong>数据携带权：</strong>以可读格式获取您的个人信息</li>
-                </ul>
-
-                <h3>4.2 如何行使权利</h3>
-                <p>您可以通过以下方式行使您的权利：</p>
-                <ul>
-                    <li>在应用内通过设置页面管理您的数据</li>
-                    <li>通过 Apple ID 设置管理您的账户信息</li>
-                    <li>联系我们的隐私团队（联系方式见下文）</li>
-                </ul>
-
-                <h2>5. 第三方服务</h2>
-
-                <h3>5.1 使用的第三方服务</h3>
-                <p>未来日记使用了以下第三方服务：</p>
-                <ul>
-                    <li><strong>Apple Sign in：</strong>用于用户身份认证</li>
-                    <li><strong>Supabase：</strong>提供云端数据存储和同步服务</li>
-                    <li><strong>AI 服务提供商：</strong>提供智能任务生成和塔罗解读功能</li>
-                </ul>
-
-                <h3>5.2 第三方隐私政策</h3>
-                <p>这些第三方服务有自己的隐私政策，我们建议您：</p>
-                <ul>
-                    <li>阅读 Apple 的隐私政策</li>
-                    <li>了解 Supabase 的数据处理方式</li>
-                    <li>关注相关 AI 服务的数据使用条款</li>
-                </ul>
-
-                <h2>6. Cookie 和类似技术</h2>
-
-                <h3>6.1 Cookie 使用</h3>
-                <p>我们的应用可能使用 Cookie 和类似技术来：</p>
-                <ul>
-                    <li>记住您的偏好设置</li>
-                    <li>提供个性化的用户体验</li>
-                    <li>分析应用使用情况</li>
-                    <li>防止欺诈和安全威胁</li>
-                </ul>
-
-                <h3>6.2 Cookie 管理</h3>
-                <p>您可以通过设备设置来管理 Cookie 偏好，但这可能会影响应用的某些功能。</p>
-
-                <h2>7. 儿童隐私保护</h2>
-
-                <h3>7.1 年龄限制</h3>
-                <p>未来日记不针对 13 岁以下的儿童。我们不会故意收集儿童的个人信息。</p>
-
-                <h3>7.2 发现儿童信息</h3>
-                <p>如果我们发现收集了儿童的个人信息，我们将立即采取措施删除这些信息。</p>
-
-                <h2>8. 国际数据传输</h2>
-
-                <h3>8.1 数据传输</h3>
-                <p>由于我们的服务提供商可能位于不同国家/地区，您的个人信息可能会被传输到您所在国家/地区以外的地区。</p>
-
-                <h3>8.2 保护措施</h3>
-                <p>我们会采取适当的保护措施，确保您的个人信息在传输过程中得到充分的保护。</p>
-
-                <h2>9. 政策更新</h2>
-
-                <h3>9.1 更改通知</h3>
-                <p>我们可能会不时更新本隐私政策。重大变更将通过以下方式通知您：</p>
-                <ul>
-                    <li>在应用内显示通知</li>
-                    <li>通过电子邮件发送通知（如适用）</li>
-                    <li>在网站上发布更新公告</li>
-                </ul>
-
-                <h3>9.2 生效时间</h3>
-                <p>更新后的隐私政策将在发布时立即生效。继续使用应用即表示您接受更新后的政策。</p>
-
-                <h2>10. 联系我们</h2>
-
-                <div class="contact-section">
-                    <h3>联系方式</h3>
-                    <p>如果您对本隐私政策有任何疑问或建议，请通过以下方式联系我们：</p>
-                    <ul>
-                        <li><strong>邮箱：</strong>privacy@manitodo.app</li>
-                        <li><strong>地址：</strong>可通过应用内反馈功能联系我们</li>
-                        <li><strong>响应时间：</strong>我们会在 7 个工作日内回复您的咨询</li>
-                    </ul>
-                </div>
-
-                <h2>11. 其他信息</h2>
-
-                <h3>11.1 适用法律</h3>
-                <p>本隐私政策适用中华人民共和国相关法律法规。</p>
-
-                <h3>11.2 争议解决</h3>
-                <p>因本隐私政策引起的争议，双方应友好协商解决；协商不成的，应提交有管辖权的人民法院诉讼解决。</p>
-
-                <div class="highlight-box">
-                    <p><strong>最后提醒：</strong>保护您的隐私是我们的责任。如果您对我们的隐私政策有任何疑问，请不要犹豫联系我们。我们会认真对待每一个问题。</p>
-                </div>
-            </div>
+        <!-- English Content -->
+        <div id="content-en" class="hidden">
+            <h1>manitodo Privacy Policy</h1>
+            <p class="update-date">Last Updated: September 14, 2025</p>
+            
+            <h2>Introduction</h2>
+            <p>manitodo ("we") values your privacy. This privacy policy explains how we collect, use, and protect your personal information.</p>
+            
+            <h2>Information We Collect</h2>
+            <h3>Account Information</h3>
+            <ul>
+                <li><strong>Email Address:</strong> Used for account login and management</li>
+                <li><strong>User ID:</strong> Used to identify your account</li>
+            </ul>
+            
+            <h3>App Content</h3>
+            <ul>
+                <li><strong>Goals and Visions:</strong> Personal goals and vision content you set</li>
+                <li><strong>Progress Records:</strong> Growth progress and feelings you record</li>
+                <li><strong>AI Conversation Content:</strong> Interactions with the AI assistant</li>
+            </ul>
+            
+            <h3>Usage Data</h3>
+            <ul>
+                <li><strong>App Usage:</strong> How you use app features, used to improve user experience</li>
+                <li><strong>Technical Data:</strong> Crash reports and performance data, used to fix issues</li>
+            </ul>
+            
+            <h2>How We Use Information</h2>
+            <p>We use the collected information to:</p>
+            <ul>
+                <li>Provide core app functionality and services</li>
+                <li>Generate personalized AI responses and suggestions for you</li>
+                <li>Sync your data across different devices</li>
+                <li>Improve app performance and user experience</li>
+                <li>Provide technical support</li>
+            </ul>
+            
+            <h2>Information Sharing</h2>
+            <p>We do not sell, rent, or trade your personal information. We only share information in the following circumstances:</p>
+            <ul>
+                <li><strong>AI Service Providers:</strong> We use third-party AI services to process your text content to provide intelligent responses</li>
+                <li><strong>Cloud Service Providers:</strong> We use cloud services to securely store your data</li>
+                <li><strong>Legal Requirements:</strong> When required by law or to protect our legitimate interests</li>
+            </ul>
+            
+            <h2>Data Security</h2>
+            <p>We employ industry-standard security measures to protect your data:</p>
+            <ul>
+                <li>Data transmission uses SSL encryption</li>
+                <li>Stored on secure cloud servers</li>
+                <li>Regular security reviews and updates</li>
+            </ul>
+            
+            <h2>Your Rights</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li>View information we hold about you</li>
+                <li>Request correction of inaccurate information</li>
+                <li>Request deletion of your account and related data</li>
+                <li>Export your data</li>
+            </ul>
+            
+            <h2>Data Retention</h2>
+            <p>We retain your data while you use our services. If you delete your account, we will delete your personal data within 30 days (except as required by law).</p>
+            
+            <h2>Children's Privacy</h2>
+            <p>Our services are not directed to children under 13. If we discover we have collected personal information from children under 13, we will delete it immediately.</p>
+            
+            <h2>Policy Updates</h2>
+            <p>We may update this privacy policy from time to time. Significant changes will be communicated through in-app notifications or email.</p>
+            
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this privacy policy, please contact us:</p>
+            <ul>
+                <li>Email: wenjiaqi8255@outlook.com</li>
+            </ul>
+            
+            <hr>
+            <p class="update-date">This privacy policy applies to all versions of the manitodo app.</p>
         </div>
     </div>
 
     <script>
-        // 平滑滚动
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+        function switchLanguage(lang) {
+            // Hide all content divs
+            document.getElementById('content-zh').classList.toggle('hidden', lang !== 'zh');
+            document.getElementById('content-en').classList.toggle('hidden', lang !== 'en');
+            
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
             });
-        });
+            
+            // Add active class to selected button
+            if (lang === 'zh') {
+                document.querySelector('.lang-btn[onclick="switchLanguage(\'zh\')"]').classList.add('active');
+                document.documentElement.lang = 'zh';
+                document.title = 'manitodo 隐私政策';
+            } else {
+                document.querySelector('.lang-btn[onclick="switchLanguage(\'en\')"]').classList.add('active');
+                document.documentElement.lang = 'en';
+                document.title = 'manitodo Privacy Policy';
+            }
+        }
 
-        // 添加页面加载动画
-        window.addEventListener('load', function() {
-            document.querySelectorAll('.privacy-content > *').forEach((element, index) => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(20px)';
-                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-
-                setTimeout(() => {
-                    element.style.opacity = '1';
-                    element.style.transform = 'translateY(0)';
-                }, index * 100);
-            });
+        // Set default language to Chinese on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            switchLanguage('zh');
         });
     </script>
 </body>

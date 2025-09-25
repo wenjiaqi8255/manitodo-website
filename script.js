@@ -211,7 +211,7 @@ window.addEventListener('load', function() {
     initFormValidation();
 
     // 控制台欢迎信息
-    console.log('%c🌟 欢迎来到未来日记！', 'font-size: 16px; font-weight: bold; color: #612a74;');
+    console.log('%c🌟 欢迎来到manitodo！', 'font-size: 16px; font-weight: bold; color: #612a74;');
     console.log('%c让每个目标都成为美好故事的开始 ✨', 'font-size: 14px; color: #f35d9c;');
 });
 
