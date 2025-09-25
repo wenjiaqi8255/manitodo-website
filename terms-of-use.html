@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用条款 - 未来日记</title>
+    <meta name="description" content="未来日记的使用条款，规定用户使用应用的权利和义务">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .terms-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-large) 0;
+        }
+
+        .terms-header {
+            text-align: center;
+            margin-bottom: var(--spacing-large);
+        }
+
+        .terms-header h1 {
+            font-size: 32px;
+            margin-bottom: var(--spacing-normal);
+            background: linear-gradient(135deg, var(--special-gradient-start), var(--special-gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .terms-content {
+            background: var(--background-card);
+            border-radius: var(--radius-standard);
+            padding: var(--spacing-large);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .effective-date {
+            background: linear-gradient(135deg, rgba(232, 160, 137, 0.1), rgba(97, 42, 116, 0.1));
+            padding: var(--spacing-loose);
+            border-radius: var(--radius-standard);
+            margin-bottom: var(--spacing-large);
+            border-left: 4px solid var(--action-tarot-reading);
+        }
+
+        .warning-box {
+            background: rgba(243, 93, 156, 0.1);
+            padding: var(--spacing-loose);
+            border-radius: var(--radius-standard);
+            margin: var(--spacing-loose) 0;
+            border-left: 4px solid var(--action-brand-pink);
+        }
+
+        .terms-content h2 {
+            color: var(--text-strong);
+            font-size: 24px;
+            margin-top: var(--spacing-large);
+            margin-bottom: var(--spacing-normal);
+            padding-bottom: var(--spacing-tight);
+            border-bottom: 2px solid var(--structure-divider);
+        }
+
+        .terms-content h3 {
+            color: var(--text-emphasis);
+            font-size: 20px;
+            margin-top: var(--spacing-loose);
+            margin-bottom: var(--spacing-tight);
+        }
+
+        .terms-content p {
+            color: var(--text-secondary);
+            line-height: var(--line-height-body);
+            margin-bottom: var(--spacing-normal);
+        }
+
+        .terms-content ul {
+            margin: var(--spacing-normal) 0;
+            padding-left: var(--spacing-loose);
+        }
+
+        .terms-content li {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-tight);
+            line-height: var(--line-height-body);
+        }
+
+        .terms-content ol {
+            margin: var(--spacing-normal) 0;
+            padding-left: var(--spacing-loose);
+        }
+
+        .terms-content ol li {
+            margin-bottom: var(--spacing-tight);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-normal);
+            margin: var(--spacing-loose) 0;
+        }
+
+        .feature-item {
+            background: var(--background-primary);
+            padding: var(--spacing-loose);
+            border-radius: var(--radius-standard);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 24px;
+            margin-bottom: var(--spacing-tight);
+        }
+
+        .service-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-loose) 0;
+            background: var(--background-primary);
+            border-radius: var(--radius-standard);
+            overflow: hidden;
+        }
+
+        .service-table th,
+        .service-table td {
+            padding: var(--spacing-normal);
+            text-align: left;
+            border-bottom: 1px solid var(--structure-divider);
+        }
+
+        .service-table th {
+            background: linear-gradient(135deg, rgba(232, 160, 137, 0.1), rgba(97, 42, 116, 0.1));
+            color: var(--text-strong);
+            font-weight: 600;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, rgba(116, 211, 207, 0.1), rgba(121, 192, 124, 0.1));
+            padding: var(--spacing-loose);
+            border-radius: var(--radius-standard);
+            margin-top: var(--spacing-large);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-tight);
+            color: var(--action-tarot-reading);
+            text-decoration: none;
+            margin-bottom: var(--spacing-loose);
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-4px);
+        }
+
+        @media (max-width: 768px) {
+            .terms-container {
+                padding: var(--spacing-loose);
+            }
+
+            .terms-content {
+                padding: var(--spacing-loose);
+            }
+
+            .terms-header h1 {
+                font-size: 24px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-table {
+                font-size: 14px;
+            }
+
+            .service-table th,
+            .service-table td {
+                padding: var(--spacing-normal) var(--spacing-tight);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="terms-container">
+            <a href="/" class="back-link">← 返回主页</a>
+
+            <div class="terms-header">
+                <h1>使用条款</h1>
+                <p>欢迎使用未来日记，请仔细阅读以下使用条款</p>
+            </div>
+
+            <div class="terms-content">
+                <div class="effective-date">
+                    <strong>生效日期：</strong>2024年1月15日<br>
+                    <strong>最后更新：</strong>2024年1月15日
+                </div>
+
+                <div class="warning-box">
+                    <p><strong>重要提醒：</strong>使用未来日记应用即表示您同意遵守本使用条款。如果您不同意这些条款，请不要使用我们的服务。</p>
+                </div>
+
+                <h2>1. 接受条款</h2>
+
+                <p>欢迎使用未来日记（以下简称"本应用"）。通过下载、安装或使用本应用，您同意受本使用条款的约束。如果您不同意这些条款，请不要使用本应用。</p>
+
+                <h2>2. 服务描述</h2>
+
+                <h3>2.1 服务内容</h3>
+                <p>未来日记是一款情感驱动的任务管理应用，主要提供以下服务：</p>
+
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🎯</div>
+                        <h4>目标管理</h4>
+                        <p>创建和管理个人目标</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📝</div>
+                        <h4>任务执行</h4>
+                        <p>智能任务分解和进度跟踪</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎭</div>
+                        <h4>塔罗指引</h4>
+                        <p>个性化建议和思考角度</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📊</div>
+                        <h4>成长记录</h4>
+                        <p>进度统计和成就回顾</p>
+                    </div>
+                </div>
+
+                <h3>2.2 服务限制</h3>
+                <p>本应用提供的服务可能存在以下限制：</p>
+                <ul>
+                    <li>免费版用户只能创建1个目标</li>
+                    <li>部分高级功能需要订阅付费</li>
+                    <li>AI功能需要网络连接</li>
+                    <li>音频解读功能仅限付费用户</li>
+                </ul>
+
+                <h2>3. 用户账户</h2>
+
+                <h3>3.1 账户注册</h3>
+                <p>使用本应用需要通过 Apple ID 进行身份验证。您同意：</p>
+                <ul>
+                    <li>提供真实、准确、完整的个人信息</li>
+                    <li>维护账户的安全性，不要与他人共享</li>
+                    <li>及时更新个人信息</li>
+                    <li>对账户下的所有活动负责</li>
+                </ul>
+
+                <h3>3.2 账户安全</h3>
+                <p>您负责保护您的账户安全。如果发现账户被未经授权使用，请立即：</p>
+                <ul>
+                    <li>修改 Apple ID 密码</li>
+                    <li>联系我们的客服团队</li>
+                    <li>检查应用内的数据安全</li>
+                </ul>
+
+                <h2>4. 使用规则</h2>
+
+                <h3>4.1 允许的使用</h3>
+                <p>您可以将本应用用于：</p>
+                <ul>
+                    <li>个人目标管理和任务跟踪</li>
+                    <li>记录个人成长和进步</li>
+                    <li>获取个性化的建议和指引</li>
+                    <li>与信任的朋友分享进展（可选）</li>
+                </ul>
+
+                <h3>4.2 禁止的使用</h3>
+                <p>您不得将本应用用于：</p>
+                <ul>
+                    <li>任何非法或欺诈性活动</li>
+                    <li>传播恶意软件或病毒</li>
+                    <li>侵犯他人隐私或知识产权</li>
+                    <li>发送垃圾邮件或骚扰信息</li>
+                    <li>试图破坏应用的正常运行</li>
+                    <li>反向工程或破解应用</li>
+                </ul>
+
+                <h2>5. 订阅服务</h2>
+
+                <h3>5.1 订阅计划</h3>
+                <p>我们提供以下订阅选项：</p>
+
+                <table class="service-table">
+                    <tr>
+                        <th>功能</th>
+                        <th>免费版</th>
+                        <th>付费版</th>
+                    </tr>
+                    <tr>
+                        <td>目标数量</td>
+                        <td>1个</td>
+                        <td>无限制</td>
+                    </tr>
+                    <tr>
+                        <td>任务生成</td>
+                        <td>基础</td>
+                        <td>高级AI</td>
+                    </tr>
+                    <tr>
+                        <td>塔罗解读</td>
+                        <td>文字</td>
+                        <td>文字+音频</td>
+                    </tr>
+                    <tr>
+                        <td>数据同步</td>
+                        <td>限制</td>
+                        <td>完整</td>
+                    </tr>
+                    <tr>
+                        <td>云端备份</td>
+                        <td>无</td>
+                        <td>有</td>
+                    </tr>
+                </table>
+
+                <h3>5.2 订阅条款</h3>
+                <ul>
+                    <li>订阅通过 Apple App Store 进行计费</li>
+                    <li>订阅将自动续订，除非您提前取消</li>
+                    <li>取消订阅后，您仍可使用到当前计费周期结束</li>
+                    <li>我们不提供退款服务，除非法律要求</li>
+                </ul>
+
+                <h2>6. 知识产权</h2>
+
+                <h3>6.1 应用所有权</h3>
+                <p>未来日记应用及其所有内容，包括但不限于：</p>
+                <ul>
+                    <li>源代码和目标代码</li>
+                    <li>用户界面和设计元素</li>
+                    <li>文字、图形、徽标</li>
+                    <li>塔罗牌解读内容</li>
+                    <li>AI生成的内容和建议</li>
+                </ul>
+                <p>均为未来日记团队或其许可方的财产，受知识产权法保护。</p>
+
+                <h3>6.2 用户内容</h3>
+                <p>您保留在应用中创建的个人内容的所有权，但您授予我们：</p>
+                <ul>
+                    <li>使用、复制、修改您的内容以提供服务</li>
+                    <li>在必要时显示和分发您的内容</li>
+                    <li>分析使用数据以改进服务</li>
+                </ul>
+
+                <h2>7. 隐私保护</h2>
+
+                <p>我们重视您的隐私。关于我们如何收集、使用和保护您的个人信息，请参阅我们的<a href="/privacy">隐私政策</a>。</p>
+
+                <h2>8. 免责声明</h2>
+
+                <h3>8.1 服务按"现状"提供</h3>
+                <p>本应用按"现状"和"可用"基础提供，我们不提供任何明示或暗示的保证，包括但不限于：</p>
+                <ul>
+                    <li>服务的适销性或特定用途适用性</li>
+                    <li>服务的准确性、可靠性或完整性</li>
+                    <li>服务的连续性或错误修复</li>
+                </ul>
+
+                <h3>8.2 责任限制</h3>
+                <p>在任何情况下，我们对您的责任限于：</p>
+                <ul>
+                    <li>您为使用服务支付的金额</li>
+                    <li>直接损失，不包括间接、附带或后果性损失</li>
+                    <li>法律允许的最大范围</li>
+                </ul>
+
+                <h2>9. 赔偿</h2>
+
+                <p>您同意赔偿并使我们免受任何索赔、损失、损害、责任、成本和费用（包括合理的律师费）的损害，这些索赔源于：</p>
+                <ul>
+                    <li>您对本使用条款的违反</li>
+                    <li>您对第三方权利的侵犯</li>
+                    <li>您在使用服务时的不当行为</li>
+                </ul>
+
+                <h2>10. 终止服务</h2>
+
+                <h3>10.1 终止权利</h3>
+                <p>我们保留在任何时候终止或暂停您访问服务的权利，原因包括但不限于：</p>
+                <ul>
+                    <li>违反本使用条款</li>
+                    <li>进行欺诈或非法活动</li>
+                    <li>对服务造成技术干扰</li>
+                    <li>法律或监管要求</li>
+                </ul>
+
+                <h3>10.2 终止效果</h3>
+                <p>服务终止后：</p>
+                <ul>
+                    <li>您访问服务的权利将立即停止</li>
+                    <li>您可能无法访问您的数据</li>
+                    <li>我们保留保留或删除您数据的权利</li>
+                    <li>任何已支付的费用不予退还</li>
+                </ul>
+
+                <h2>11. 条款修改</h2>
+
+                <h3>11.1 修改权利</h3>
+                <p>我们保留随时修改这些使用条款的权利。修改将在以下情况下生效：</p>
+                <ul>
+                    <li>在应用内发布新条款</li>
+                    <li>通过电子邮件通知用户</li>
+                    <li>在网站上发布更新公告</li>
+                </ul>
+
+                <h3>11.2 继续使用</h3>
+                <p>如果我们在修改条款后继续使用服务，即表示您接受修改后的条款。如果您不同意修改后的条款，应停止使用服务。</p>
+
+                <h2>12. 第三方服务</h2>
+
+                <h3>12.1 集成服务</h3>
+                <p>本应用可能集成第三方服务，包括：</p>
+                <ul>
+                    <li>Apple Sign in（身份验证）</li>
+                    <li>Supabase（数据存储）</li>
+                    <li>AI 服务提供商（智能功能）</li>
+                </ul>
+
+                <h3>12.2 第三方条款</h3>
+                <p>使用第三方服务受这些服务提供商的条款约束。我们不对第三方服务的内容、隐私政策或做法负责。</p>
+
+                <h2>13. 通知和沟通</h2>
+
+                <p>我们可能通过以下方式与您沟通：</p>
+                <ul>
+                    <li>在应用内显示通知</li>
+                    <li>发送电子邮件到您的注册邮箱</li>
+                    <li>在应用内发布公告</li>
+                    <li>通过 Apple 的通知系统</li>
+                </ul>
+
+                <h2>14. 不可抗力</h2>
+
+                <p>我们对因以下原因导致的任何服务中断或延迟不承担责任：</p>
+                <ul>
+                    <li>自然灾害（地震、洪水等）</li>
+                    <li>战争、恐怖主义或暴乱</li>
+                    <li>政府行为或法律变更</li>
+                    <li>互联网服务提供商故障</li>
+                    <li>第三方服务中断</li>
+                </ul>
+
+                <h2>15. 争议解决</h2>
+
+                <h3>15.1 协商解决</h3>
+                <p>我们鼓励通过友好协商解决因本使用条款引起的争议。</p>
+
+                <h3>15.2 适用法律</h3>
+                <p>本使用条款受中华人民共和国法律管辖。</p>
+
+                <h3>15.3 争议管辖</h3>
+                <p>任何争议应提交有管辖权的人民法院解决。</p>
+
+                <h2>16. 一般条款</h2>
+
+                <h3>16.1 完整协议</h3>
+                <p>本使用条款构成您与我们之间的完整协议，取代所有先前的口头或书面协议。</p>
+
+                <h3>16.2 可分割性</h3>
+                <p>如果本使用条款的任何条款被认定为无效或不可执行，其余条款仍然有效。</p>
+
+                <h3>16.3 弃权</h3>
+                <p>我们未能执行任何条款不构成对该条款的弃权。</p>
+
+                <h3>16.4 转让</h3>
+                <p>未经我们事先书面同意，您不得转让本使用项下的任何权利或义务。</p>
+
+                <div class="contact-section">
+                    <h3>联系我们</h3>
+                    <p>如果您对本使用条款有任何疑问或建议，请通过以下方式联系我们：</p>
+                    <ul>
+                        <li><strong>邮箱：</strong>support@manitodo.app</li>
+                        <li><strong>应用内反馈：</strong>通过设置页面的反馈功能</li>
+                        <li><strong>响应时间：</strong>我们会在 3-5 个工作日内回复</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <p><strong>最后提醒：</strong>使用本应用前请确保您已完全理解并同意本使用条款的所有内容。如有任何疑问，请及时联系我们。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 添加页面加载动画
+        window.addEventListener('load', function() {
+            document.querySelectorAll('.terms-content > *').forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
